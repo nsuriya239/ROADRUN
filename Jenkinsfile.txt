@@ -1,10 +1,11 @@
 pipeline{
-     agent {
-         node{
-             label 'Jenkins Workspace'
-             customWorkspace '/E/RRS/RRS_Automation_CodeBase/jenkins_workspace'
-         }
-     }
+     agent any
+     //{
+       //  node{
+         //    label 'Jenkins Workspace'
+           //  customWorkspace '/E/RRS/RRS_Automation_CodeBase/jenkins_workspace'
+        // }
+    // }
 
      stages{
         stage('checkout'){
