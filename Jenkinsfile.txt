@@ -37,7 +37,10 @@ pipeline{
 		 }
         }
         stage('results'){
+            steps{
+                echo 'Archiving results'
             archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
+            }
         }
      }
      post { 
