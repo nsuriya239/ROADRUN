@@ -1,0 +1,37 @@
+pipeline{
+     agent {
+         node{
+             label 'Jenkins Workspace'
+             customWorkspace 'E:\RRS\RRS_Automation_CodeBase\jenkins_workspace'
+         }
+     }
+
+     stages{
+        stage('checkout'){
+             echo 'Checkout steps'
+                checkout scm
+        }
+        stage('clean'){
+            echo 'Cleaning steps'
+            withMaven(
+                    // Maven installation declared in the Jenkins "Global Tool Configuration"
+                    maven: 'M3',
+                    // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
+                    // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
+                    mavenSettingsConfig: 'my-maven-settings',
+                    mavenLocalRepo: '.repository') {
+                              // Run the maven build
+                                bat 'mvn clean'
+                   }
+        }
+       // stage('results'){
+         //   archiveArtifacts artifacts: '**/target/*.*', fingerprint: true
+        //}
+     }
+     post { 
+        always { 
+            echo 'This is Jenkins QA Automation Pipeline'
+        }
+    }
+
+}

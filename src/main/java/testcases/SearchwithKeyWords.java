@@ -1,6 +1,8 @@
 package testcases;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.awt.AWTException;
 
 import org.testng.annotations.BeforeTest;
