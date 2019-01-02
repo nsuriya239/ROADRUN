@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="114815" started-at="2018-12-05T17:28:14Z" finished-at="2018-12-05T17:30:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="114815" started-at="2018-12-05T17:28:14Z" finished-at="2018-12-05T17:30:08Z">
+      <class name="testcases.CreateanAccount">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="beforeSuite" is-config="true" duration-ms="2941" started-at="2018-12-05T17:28:11Z" finished-at="2018-12-05T17:28:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setData()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="setData" is-config="true" duration-ms="0" started-at="2018-12-05T17:28:14Z" finished-at="2018-12-05T17:28:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setData -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="beforeClass" is-config="true" duration-ms="2" started-at="2018-12-05T17:28:15Z" finished-at="2018-12-05T17:28:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="beforeMethod" is-config="true" duration-ms="38465" started-at="2018-12-05T17:28:18Z" finished-at="2018-12-05T17:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createanAccount(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.CreateanAccount@127bd23]" name="createanAccount" duration-ms="72142" started-at="2018-12-05T17:28:56Z" data-provider="fetchData" finished-at="2018-12-05T17:30:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a45@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cameraman12$]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cameraman12$]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createanAccount -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-12-05T17:30:08Z" finished-at="2018-12-05T17:30:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-12-05T17:30:08Z" finished-at="2018-12-05T17:30:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.CreateanAccount@127bd23]" name="afterSuite" is-config="true" duration-ms="2285" started-at="2018-12-05T17:30:11Z" finished-at="2018-12-05T17:30:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testcases.CreateanAccount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
