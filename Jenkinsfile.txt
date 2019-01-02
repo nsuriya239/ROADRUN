@@ -2,7 +2,7 @@ pipeline{
      agent {
          node{
              label 'Jenkins Workspace'
-             customWorkspace '\E\RRS\RRS_Automation_CodeBase\jenkins_workspace'
+             customWorkspace 'E\RRS\RRS_Automation_CodeBase\jenkins_workspace'
          }
      }
 
