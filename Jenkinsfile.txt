@@ -25,9 +25,20 @@ pipeline{
                    }
 		 }
         }
-       // stage('results'){
-         //   archiveArtifacts artifacts: '**/target/*.*', fingerprint: true
-        //}
+         stage('test'){
+		steps{
+            echo 'Testing testcases'
+            withMaven(
+                    // Maven installation declared in the Jenkins "Global Tool Configuration"
+                    maven: 'MAVEN_HOME') {
+                              // Run the maven build
+                                bat 'mvn clean test'
+                   }
+		 }
+        }
+        stage('results'){
+            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
+        }
      }
      post { 
         always { 
