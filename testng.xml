@@ -3,7 +3,41 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testcases.AddToCart"/>
+      <class name="testcases.SearchaModel"/>
+      <class name="testcases.PDP_SizechartAvailable"/>
+      <class name="testcases.Gift"/>
+      <class name="testcases.PDP_AddtoCart"/>
+      <class name="testcases.PDP_SocialmediaLink"/>
+      <class name="testcases.Logout"/>
+      <class name="testcases.PLP_EditingPageNumber"/>
+      <class name="testcases.LoginwithInvalidPassword"/>
+      <class name="testcases.PDP_ChooseaColor"/>
+      <class name="testcases.PDP_Incorrect_AddtoCart"/>
+      <class name="testcases.Order_LoginFlow"/>
+      <class name="testcases.PDP_QuantityDropdown"/>
+      <class name="testcases.PDP_Chooseasize"/>
+      <class name="testcases.SearchaBrand"/>
+      <class name="testcases.PDP_VerifyMSRPandVIPprice"/>
+      <class name="testcases.DemoCase2_loginflow"/>
+      <class name="testcases.PDP_Reviewstab"/>
+      <class name="testcases.PLP_ClickingShopnowLink"/>
+      <class name="testcases.LaunchTheUrl"/>
+      <class name="testcases.SearchwithKeyWords"/>
+      <class name="testcases.PDP_YouMayAlsoLikeTab"/>
+      <class name="testcases.PDP_ChooseColorandtheVariantChanges"/>
+      <class name="testcases.LoginFlow"/>
+      <class name="testcases.AddtwoProductstoCart"/>
+      <class name="testcases.PDP_VisibilityofItemID"/>
+      <class name="testcases.PDP_ClickaProduct"/>
+      <class name="testcases.PaywithGiftCard"/>
+      <class name="testcases.Fit"/>
+      <class name="testcases.PLP_ClickingNextbutton"/>
+      <class name="testcases.PLP_ClickingSortBy"/>
+      <class name="testcases.CouponCode"/>
+      <class name="testcases.SearchWithInvalidKeyword"/>
+      <class name="testcases.Orders_GuestFlow"/>
+      <class name="testcases.CreateanAccount"/>
+      <class name="testcases.PDP_VisibilityofGetthisPriceLink"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
