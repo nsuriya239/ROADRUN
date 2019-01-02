@@ -8,10 +8,13 @@ pipeline{
 
      stages{
         stage('checkout'){
+		steps{
              echo 'Checkout steps'
                 checkout scm
+		}
         }
         stage('clean'){
+		steps{
             echo 'Cleaning steps'
             withMaven(
                     // Maven installation declared in the Jenkins "Global Tool Configuration"
@@ -19,6 +22,7 @@ pipeline{
                               // Run the maven build
                                 bat 'mvn clean'
                    }
+		 }
         }
        // stage('results'){
          //   archiveArtifacts artifacts: '**/target/*.*', fingerprint: true
