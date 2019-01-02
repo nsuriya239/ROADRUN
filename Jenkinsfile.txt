@@ -8,12 +8,12 @@ pipeline{
     // }
 
      stages{
-        stage('checkout'){
+       /* stage('checkout'){
 		steps{
              echo 'Checkout steps'
                 checkout scm
 		}
-        }
+        }*/
         stage('clean'){
 		steps{
             echo 'Cleaning steps'
