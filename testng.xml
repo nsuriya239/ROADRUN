@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testcases.SearchaModel"/>
-      <class name="testcases.PDP_SizechartAvailable"/>
+     <!-- <class name="testcases.PDP_SizechartAvailable"/>
       <class name="testcases.Gift"/>
       <class name="testcases.PDP_AddtoCart"/>
       <class name="testcases.PDP_SocialmediaLink"/>
@@ -37,7 +37,7 @@
       <class name="testcases.SearchWithInvalidKeyword"/>
       <class name="testcases.Orders_GuestFlow"/>
       <class name="testcases.CreateanAccount"/>
-      <class name="testcases.PDP_VisibilityofGetthisPriceLink"/>
+      <class name="testcases.PDP_VisibilityofGetthisPriceLink"/>  -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
