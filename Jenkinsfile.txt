@@ -32,7 +32,7 @@ pipeline{
                     // Maven installation declared in the Jenkins "Global Tool Configuration"
                     maven: 'MAVEN_HOME') {
                               // Run the maven build
-                                bat 'mvn clean test'
+                                bat 'mvn test'
                    }
 		 }
         }
