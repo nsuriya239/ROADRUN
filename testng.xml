@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testcases.SearchaModel"/>
-     <!-- <class name="testcases.PDP_SizechartAvailable"/>
+      <class name="testcases.PDP_SizechartAvailable"/>
       <class name="testcases.Gift"/>
       <class name="testcases.PDP_AddtoCart"/>
       <class name="testcases.PDP_SocialmediaLink"/>
@@ -12,7 +12,7 @@
       <class name="testcases.PLP_EditingPageNumber"/>
       <class name="testcases.LoginwithInvalidPassword"/>
       <class name="testcases.PDP_ChooseaColor"/>
-      <class name="testcases.PDP_Incorrect_AddtoCart"/>
+      <!-- class name="testcases.PDP_Incorrect_AddtoCart"/>
       <class name="testcases.Order_LoginFlow"/>
       <class name="testcases.PDP_QuantityDropdown"/>
       <class name="testcases.PDP_Chooseasize"/>
