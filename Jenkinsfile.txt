@@ -44,9 +44,13 @@ pipeline{
         }
      }
      post { 
-        always { 
-            echo 'This is Jenkins QA Automation Pipeline'
-        }
+	failure{
+		echo 'Archiving results after failure'
+		            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
+	} 
+	always {
+	            echo 'End of Automation Pipeline'
+ 	 }
     }
 
 }
