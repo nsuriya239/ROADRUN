@@ -1,68 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)" parallel="classes">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.LaunchTheUrl">
-        <methods>
-          <include name="afterTest"/>
-          <include name="setData"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="verifysearch"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.LaunchTheUrl -->
-      <class name="testcases.LoginFlow">
-        <methods>
-          <include name="setData"/>
-          <include name="afterTest"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="Login" invocation-numbers="0"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.LoginFlow -->
-      <class name="testcases.CreateanAccount">
+      <class name="testcases.Gift">
         <methods>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="gift" invocation-numbers="0"/>
           <include name="afterMethod"/>
           <include name="setData"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
-          <include name="createanAccount" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcases.CreateanAccount -->
-      <class name="testcases.LoginwithInvalidPassword">
+      </class> <!-- testcases.Gift -->
+      <class name="testcases.PDP_SocialmediaLink">
         <methods>
-          <include name="afterTest"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="setData"/>
-          <include name="afterMethod"/>
-          <include name="LoginwithInvalidPasswor" invocation-numbers="0"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- testcases.LoginwithInvalidPassword -->
-      <class name="testcases.Logout">
-        <methods>
-          <include name="setData"/>
+          <include name="facebookpage"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="afterMethod"/>
-          <include name="Loggingout" invocation-numbers="0"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="setData"/>
         </methods>
-      </class> <!-- testcases.Logout -->
+      </class> <!-- testcases.PDP_SocialmediaLink -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

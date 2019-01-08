@@ -1,22 +1,10 @@
 pipeline{
      agent any
-     //{
-       //  node{
-         //    label 'Jenkins Workspace'
-           //  customWorkspace '/E/RRS/RRS_Automation_CodeBase/jenkins_workspace'
-        // }
-    // }
-
      stages{
-       /* stage('checkout'){
-		steps{
-             echo 'Checkout steps'
-                checkout scm
-		}
-        }*/
         stage('clean'){
 		steps{
             echo 'Cleaning steps'
+            slackSend color: "#439FE0", message: "Cleaning project - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
             withMaven(
                     // Maven installation declared in the Jenkins "Global Tool Configuration"
                     maven: 'MAVEN_HOME') {
@@ -28,6 +16,7 @@ pipeline{
          stage('test'){
 		steps{
             echo 'Testing testcases'
+            slackSend color: "#439FE0", message: "Test Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
             withMaven(
                     // Maven installation declared in the Jenkins "Global Tool Configuration"
                     maven: 'MAVEN_HOME') {
@@ -39,12 +28,18 @@ pipeline{
         stage('results'){
             steps{
                 echo 'Archiving results'
+                slackSend color: "#439FE0", message: "Archiving Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
             archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
             }
         }
      }
-     post { 
+     post {
+         success{
+             slackSend color: "#439FE0", message: "Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+		echo 'Build Success'
+         } 
 	failure{
+        slackSend color: "#439FE0", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		echo 'Archiving results after failure'
 		            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
 	} 
