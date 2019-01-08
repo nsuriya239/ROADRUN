@@ -3,7 +3,7 @@ pipeline{
      stages{
          stage('Build Started'){
              steps{
-                slackSend color: "#FDDD08", message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)" 
+                slackSend color: "#FDDD08", message: "Build Started - ${env.JOB_NAME} BUILD_NUMBER ${env.BUILD_NUMBER} Started by  (<${env.BUILD_URL}|Open>)" 
              }
          }
         stage('clean'){
@@ -34,7 +34,7 @@ pipeline{
             steps{
                 echo 'Archiving results'
                 slackSend color: "#439FE0", message: "Archiving Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
-            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
+            //archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
             }
         }
      }
@@ -46,7 +46,7 @@ pipeline{
 	failure{
         slackSend color: "danger", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		echo 'Archiving results after failure'
-		            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
+		           // archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
 	} 
 	always {
 	            echo 'End of Automation Pipeline'
