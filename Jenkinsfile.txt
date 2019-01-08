@@ -35,11 +35,11 @@ pipeline{
      }
      post {
          success{
-             slackSend color: "#439FE0", message: "Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+             slackSend color: "good", message: "Build Success - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		echo 'Build Success'
          } 
 	failure{
-        slackSend color: "#439FE0", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+        slackSend color: "danger", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 		echo 'Archiving results after failure'
 		            archiveArtifacts artifacts: '**/test-output/*.*', fingerprint: true
 	} 
