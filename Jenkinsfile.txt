@@ -50,6 +50,7 @@ pipeline{
 	} 
 	always {
 	            echo 'End of Automation Pipeline'
+                slackSend color: "#FDDD08", message: "Build Finished - ${env.JOB_NAME} ${env.BUILD_NUMBER}"
  	 }
     }
 
