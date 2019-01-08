@@ -3,7 +3,7 @@ pipeline{
      stages{
          stage('Build Started'){
              steps{
-                slackSend color: "#FDDD08", message: "Cleaning project - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)" 
+                slackSend color: "#FDDD08", message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)" 
              }
          }
         stage('clean'){
